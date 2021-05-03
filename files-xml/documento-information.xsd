@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema    xmlns="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://documentonorma.com.br"
+           xmlns:tns="http://documentonorma.com.br"
+           elementFormDefault="qualified">
+
+
+    <element name="GetDocumentDetailRequest">
+       <complexType>
+           <sequence>
+              <element name='id' type='int'></element>
+           </sequence>
+       </complexType>
+    </element>
+    
+        <element name="GetDocumentDetailResponse">
+       <complexType>
+           <sequence>
+              <element name='DocumentDetail' type='tns:DocumentDetail'></element>
+           </sequence>
+       </complexType>
+    </element>
+    
+    
+  <complexType name="DocumentDetail">
+      <sequence>
+           <element name="id" type="int"></element>
+           <element name="norma" type="string"></element>
+           <element name="documento" type="string"></element>
+      </sequence>
+  
+  </complexType>
+</schema>
+
+
+
+
+

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema    xmlns="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://documentonorma.com.br"
+           xmlns:tns="http://documentonorma.com.br"
+           elementFormDefault="qualified">
+
+
+    <element name="GetDocumentDetailRequest">
+       <complexType>
+           <sequence>
+              <element name='id' type='int'></element>
+           </sequence>
+       </complexType>
+    </element>
+    
+        <element name="GetDocumentDetailResponse">
+       <complexType>
+           <sequence>
+              <element name='DocumentDetail' type='tns:DocumentDetail'></element>
+           </sequence>
+       </complexType>
+    </element>
+    
+    <element name="DeleteDocumentRequest">
+       <complexType>
+           <sequence>
+              <element name='id' type='int'></element>
+           </sequence>
+       </complexType>
+    </element>
+    
+         <element name="insertDocumentRequest">
+       <complexType>
+           <sequence>
+              <element name='DocumentDetail' type='tns:DocumentDetail'></element>
+           </sequence>
+       </complexType>
+    </element>
+    
+    
+   
+        <element name="DeleteDocumentResponse">
+       <complexType>
+           <sequence>
+              <element name='status' type='tns:Status'></element>
+           </sequence>
+       </complexType>
+    </element>
+    
+    
+  <simpleType name="Status">
+       <restriction  base="string">
+       <enumeration value="SUCCESS"/>
+        <enumeration value="FAILURE"/>
+       </restriction>
+    
+  </simpleType>  
+    
+  <complexType name="DocumentDetail">
+      <sequence>
+           <element name="id" type="int"></element>
+           <element name="norma" type="string"></element>
+           <element name="documento" type="base64Binary"></element>
+      </sequence>
+  
+  </complexType>
+</schema>
+
+
+
+
+

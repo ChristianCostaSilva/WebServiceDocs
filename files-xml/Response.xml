@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GetDocumentDetailResponse xmlns="http://documentonorma.com.br"
+       xsi:schemaLocation="http://documentonorma.com.br documento-information.xsd"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <DocumentDetail>
+        <id>1</id>
+        <norma>Iso9001</norma>
+        <documento>opdf</documento>
+    </DocumentDetail>
+</GetDocumentDetailResponse>
